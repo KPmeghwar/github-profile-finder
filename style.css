@@ -1,0 +1,84 @@
+.main-container{
+	background:url("https://cdn.jsdelivr.net/gh/Neat-Coder23/resources/image.png");
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+}
+.search-container{
+	display: flex;
+	width: 300px;
+	margin: 0 auto;
+    margin-top: 90px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+#input{
+	width: 85%;
+	outline: none;
+	padding-left: 5px;
+	border: transparent;
+}
+
+.search{
+	border: transparent;
+	background-color:skyblue; 
+	color:#fff;
+	outline: none;
+	cursor: pointer;
+}
+.profile-card{
+	width: 400px;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.493);
+	backdrop-filter:blur(5px);
+	margin-top: 50px;
+}
+.main-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	font-family: 'Varela Round',sans-serif;
+	border-bottom: 1px solid gray;
+}
+#pro-img{
+	height: 80px;
+	width: auto;
+	border-radius: 50%;
+	box-shadow: 0 3px 10px gray;
+}
+.name{
+	margin-top: 10px;
+}
+#username{
+	font-size: 15px;
+	text-decoration: none;
+	color:gray;
+}
+.bio-data{
+	width: 100%;
+	text-align: center;
+	padding: 40px 0;
+	font-weight: bold;
+	font-family: monospace; 
+}
+.follow{
+	width: 100%;
+	display: flex;
+	height: 80px;
+	border-top: 1px solid gray;
+}
+.follow div{
+	width: 50%;
+	text-align: center;
+	padding-top: 18px;
+	border:1px solid gray;
+	font-size: 17px;
+	font-family: 'Varela Round',sans-serif;
+}

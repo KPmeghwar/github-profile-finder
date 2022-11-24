@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GitHub Profile Finder</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+     
+     <div class="main-container">
+     	  <div class="search-container">
+     	  	    <input type="tetx" name="username" id="input">
+     	  	    <button class="search" id="search">Search</button>
+     	  </div>
+     	  <!-- profile -->
+     	  <div class="profile-card">
+     	  	   <div class="main-info">
+     	  	   	   <img src="https://avatars.githubusercontent.com/u/70049846?v=4" alt="" id="pro-img"><br>
+     	  	   	   <span class="name" id="name">Kailash Meghwar</span>
+     	  	   	   <a href="" id="username">@KPmeghwar</a>
+     	  	   </div>
+     	  	   <div class="bio-data" id="bio">
+     	  	   	   Full Stack Developer | PHP | SHOPIFY | LARAVEL | HTML5 | CSS3 | BOOSTRAP4 | JAVASCRIPT | API
+     	  	   </div>
+     	  	   <div class="follow" id="follow">
+     	  	   	   <div class="follower"><span class="no" id="fllwrs">1</span><br>Followers</div>
+     	  	   	   <div class="followings"><span class="no" id="fllwgs">3</span><br>Followings</div>
+     	  	   </div>
+     	  </div>
+     </div>
+<!-- javascrip -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+<script>
+	  $("#search").click(()=>{
+	  	$.getJSON("https://api.github.com/users/"+$("#input").val(),(data)=>{
+	  		 $("#pro-img").attr("src",data.avatar_url);
+	  		 $("#name").html(data.name);
+	  		 $("#username").html("@"+data.login);
+	  		 $("#username").attr("href",data.html_url);
+	  		 $("#bio").html(data.bio);
+	  		 $("#fllwrs").html(data.followers);
+	  		 $("#fllwgs").html(data.following);
+	  	})
+	  })
+</script>
+</html>
